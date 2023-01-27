@@ -1,0 +1,62 @@
+
+body{
+    background: url("../images/ghost-of-tsushima-fan-4k-ep.jpg") no-repeat;
+    background-position: center;
+    -webkit-backdrop-filter: blur(10px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+
+}
+form{
+    background-color: #000000AA;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 50px;
+    align-items: center;
+}
+
+form input{
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #DDC7A0;
+    border: 3px solid #DDC7A0;
+}
+form input[type="submit"]{
+    font-family: Kiona;
+    font-weight: bold;
+}
+form input[type="submit"]:hover{
+    background-color: #F57513;
+    transition-delay: 0s;
+    transition-duration: 0.22s;
+    border-radius: 10px;
+    font-size: 15.8px;
+}
+form input[type="text"]:hover{
+    background-color: #F57513;
+    transition-duration: 0.22s;
+    transition-delay: 0s;
+    border-radius: 10px;
+    font-size: 13.5px;
+    border: 3px solid #DDC7A0;
+}
+form input[type="password"]:hover{
+    background-color: #F57513;
+    transition-duration: 0.22s;
+    transition-delay: 0s;
+    border-radius: 10px;
+    font-size: 13.5px;
+    border: 3px solid #DDC7A0;
+}
+h1{
+    font-family: Kiona;
+    color: #CCCCCC;
+}
+

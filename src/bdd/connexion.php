@@ -7,6 +7,14 @@ class connexion
     private $email;
     private $mdp;
     private $table;
+    private $enregistementemail;
+    private $enregistementmdp;
+    private $enregistementnom;
+    private $enregistementprenom;
+    private $enregistementadresse;
+    private $enregistementddn;
+
+
 
     public function __construct($mdp, $email, $table, $tableemail, $tablemdp){
         $this->tablemdp=$tablemdp;
@@ -57,6 +65,22 @@ class connexion
     }
     public function co(){
         return "SELECT * FROM ".$this->table." WHERE ".$this->tableemail." = :email and ".$this->tablemdp." = :mdp";
+    }
+    public function enregistrement($enregistementemail, $enregistementmdp, $enregistementnom, $enregistementprenom, $enregistementadresse, $enregistementddn){
+        $this->enregistementmdp = $enregistementmdp;
+        $this->enregistementnom = $enregistementnom;
+        $this->enregistementprenom = $enregistementprenom;
+        $this->enregistementadresse = $enregistementadresse;
+        $this->enregistementddn = $enregistementddn;
+        $this->enregistementemail = $enregistementemail;
+
+        session_start();
+        $_SESSION['email'] = $this->enregistementemail;
+        $_SESSION['mdp'] = $this->enregistementmdp;
+        $_SESSION['nom'] = $this->enregistementnom;
+        $_SESSION['prenom'] = $this->enregistementprenom;
+        $_SESSION['adresse'] = $this->enregistementadresse;
+        $_SESSION['ddn'] = $this->enregistementddn;
     }
     
 

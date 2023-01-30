@@ -1,22 +1,35 @@
 <?php
-
+require_once 'bdd.php';
+$base = new bdd("atm", "localhost", "", "root");
 class suppression
 {
     private $tabledesuppression;
     private $conditiontable;
-    private $condition;
-    private $post;
+    public function __construct($conditiontable, $tabledesuppression){
+        $this->conditiontable = $conditiontable;
+        $this->tabledesuppression = $tabledesuppression;
+    }
 
-    public function supprimer( $conditiontable, $tabledesuppression, $post){
-        $this->post=$post;
-        $this->tabledesuppression=$tabledesuppression;
-        $this->conditiontable=$conditiontable;
-        $this->a = "DELETE FROM ".$this->tabledesuppression." WHERE ".$this->conditiontable." = :condition";
-        $this->a->execute(array('condition' => $this->condition));
+    /**
+     * @param mixed $tabledesuppression
+     */
+    public function setTabledesuppression($tabledesuppression)
+    {
+        $this->tabledesuppression = $tabledesuppression;
     }
-    public function setCondition($condition){
-        $this->condition=$condition;
+
+    /**
+     * @param mixed $conditiontable
+     */
+    public function setConditiontable($conditiontable)
+    {
+        $this->conditiontable = $conditiontable;
     }
+
+    public function supprimer(){
+        return "DELETE FROM ".$this->tabledesuppression." WHERE ".$this->conditiontable." = :condition";
+    }
+
 
 
 }

@@ -7,7 +7,7 @@
 <?php
 session_start();
 ?>
-<form action="traitementacceuil.php" method="post">
+<form action="redirection.php" method="post">
 <input type="submit" value="ajouter" name="ajouter">
 <input type="submit" value="afficher" name="afficher">
 <input type="submit" value="rechercher"name="rechercher">

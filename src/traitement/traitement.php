@@ -8,7 +8,6 @@ $req = $connexion->b->prepare($co->co());
 $req->execute(array('email' => $_POST['login'], 'mdp' => $_POST['mdp']));
 $res = $req->fetchAll();
 if (!empty($res)){
-    var_dump($res);
     foreach ($res as $item) {
         $co->enregistrement($item['login'], $item['mdp'], $item['nom'], $item['prenom'], $item['adresse'], $item['date_de_naissance']);
     }

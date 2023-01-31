@@ -5,19 +5,19 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-<div id="login">
-    <form method="post" action="traitement.php">
+    <form method="post" action="traitementinsc.php">
         <h1>sign up</h1>
-        <input type="text" name="noma" placeholder="Nom">
-        <input type="text" name="prenoma" placeholder="Prenom">
-        <input type="text" name="dpa" placeholder="Département">
-        <input type="text" name="logina" placeholder="Login">
-        <input type="password" name="mdpa" placeholder="Mot de passe">
-        <input type="submit" value="inscription">
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="text" name="prenom" placeholder="Prenom">
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="mdp" placeholder="Mot de passe">
+        <input type="text" name="adresse" placeholder="Adresse">
+        <input type="date" name="ddn" placeholder="Date de naissance">
+
+        <input type="submit" value="inscription" name="inscrire">
         <input name="con" type="submit" value="connexion">
 
     </form>
-</div>
 </body>
 </html>
 <?php

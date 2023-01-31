@@ -1,6 +1,7 @@
 <?php
 require_once '../bdd/bdd.php';
 require_once '../bdd/connexion.php';
+require_once '../bdd/inscrire.php';
 $co = new connexion($_POST['mdp'], $_POST['login'], "client", "login", "mdp");
 $connexion = new bdd("atm", "localhost", "", "root");
 if (isset($_POST['co'])){
@@ -13,4 +14,8 @@ if (!empty($res)){
     }
     header("Location: acceuil.php");
 }else header("Location: ../../index.php");
+}
+
+if (isset($_POST['insc'])) {
+    header("Location: inscription.php");
 }
